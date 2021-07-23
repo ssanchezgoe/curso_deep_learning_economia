@@ -22,3 +22,11 @@ def image_info(path_to_image):
     print(f"Dimensiones de la imagen: {image.shape}")
 
     return None
+
+def imshow(path_to_image, cmap = "Gray", title = "Imagen"):
+    img = plt.imread(path_to_image)
+    plt.imshow(img, cmap=cmap)
+    plt.title(title)
+    plt.show()
+
+    return None
