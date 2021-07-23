@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def imshow_RGB(path_to_image)
+def imshow_RGB(path_to_image):
     img1 = plt.imread(path_to_image)
     figure, plots = plt.subplots(ncols=3, nrows=1)
     for i, subplot in zip(range(3), plots):
