@@ -13,3 +13,12 @@ def imshow_RGB(path_to_image):
     plt.show()
 
     return None
+
+def image_info(path_to_image)
+
+    image = plt.imread(path_to_image)
+    print(f"Profundidad de pixel {image.dtype}")
+    print(f"Valores (min, max): ({np.min(image)},{np.max(image)})")
+    print(f"Dimensiones de la imagen: {image.shape}")
+
+    return None
