@@ -14,7 +14,7 @@ def imshow_RGB(path_to_image):
 
     return None
 
-def image_info(path_to_image)
+def image_info(path_to_image):
 
     image = plt.imread(path_to_image)
     print(f"Profundidad de pixel {image.dtype}")
