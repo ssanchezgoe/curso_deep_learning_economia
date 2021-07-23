@@ -23,7 +23,7 @@ def image_info(path_to_image):
 
     return None
 
-def imshow(path_to_image, cmap = "Gray", title = "Imagen"):
+def imshow(path_to_image, cmap = "gray", title = "Imagen"):
     img = plt.imread(path_to_image)
     plt.imshow(img, cmap=cmap)
     plt.title(title)
