@@ -1,3 +1,5 @@
+import cv2
+
 def crop_center_square(frame):
     y, x = frame.shape[0:2]
     min_dim = min(y, x)
