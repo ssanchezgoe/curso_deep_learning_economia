@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 def crop_center_square(frame):
     y, x = frame.shape[0:2]
