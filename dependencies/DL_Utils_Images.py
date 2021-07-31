@@ -20,7 +20,7 @@ def image_info(path_to_image):
     print(f"Profundidad de pixel {image.dtype}")
     print(f"Valores (min, max): ({np.min(image)},{np.max(image)})")
     print(f"Dimensiones de la imagen: {image.shape}")
-    print(f"Total Pixeles: {image.ravel()}")
+    print(f"Total Pixeles: {image.ravel().shape()}")
 
     return None
 
