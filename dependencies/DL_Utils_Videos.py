@@ -24,4 +24,4 @@ def video_info(path):
     print(f"Valores (min, max): ({np.min(seq)},{np.max(seq)})")
     print(f"Dimensiones del video: {seq.shape}")
     print(f"Total Pixeles: {seq.ravel().shape}")
-    return none
+    return None
