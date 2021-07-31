@@ -16,8 +16,8 @@ def load_video(path, max_frames=0, resize=(224, 224)):
             ret, frame = cap.read()
             if not ret:
                 break
-            frame = crop_center_square(frame)
-            frame = cv2.resize(frame, resize)
+            #frame = crop_center_square(frame)
+            #frame = cv2.resize(frame, resize)
             frame = frame[:, :, [2, 1, 0]]
             frames.append(frame)
 
@@ -26,3 +26,7 @@ def load_video(path, max_frames=0, resize=(224, 224)):
     finally:
         cap.release()
     return np.array(frames)
+
+def video_info(path):
+    pass
+    return none
