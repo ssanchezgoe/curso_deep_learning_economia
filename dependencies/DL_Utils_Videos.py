@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import random
+import matplotlib.pyplot as plt
 
 def load_video(path, max_frames=0, resize=(224, 224)):
     cap = cv2.VideoCapture(path)
