@@ -43,10 +43,10 @@ def plot_frames(seq, m=3, n=3, figsize = (15,15)):
     fig, ax = plt.subplots(m, n, figsize = figsize)
     
     for i, ax in enumerate(ax.flat):
-    if i <= len(sub_frames_idx):
-        ax.imshow(seq[sub_frames_idx[i]])
-        ax.set_title(f"Frame Number {sub_frames_idx[i]}")
-    else:
-        continue
-    
+        if i <= len(sub_frames_idx):
+            ax.imshow(seq[sub_frames_idx[i]])
+            ax.set_title(f"Frame Number {sub_frames_idx[i]}")
+        else:
+            continue
+        
     return None   
