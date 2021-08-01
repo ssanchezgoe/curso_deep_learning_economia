@@ -24,4 +24,12 @@ def video_info(path):
     print(f"Valores (min, max): ({np.min(seq)},{np.max(seq)})")
     print(f"Dimensiones del video: {seq.shape}")
     print(f"Total Pixeles: {seq.ravel().shape}")
+
+    cap = cv2.VideoCapture(path)
+    cap.set(cv2.CAP_PROP_POS_AVI_RATIO,1)
+    ttime = cap.get(cv2.CAP_PROP_POS_MSEC)*seq.shape[0]/1000
+
+    print(f"El tiempo total del video es {ttime}")
+    print(f"El número de frames por segundos es {seq.shape[0]/ttime}")
+
     return None
