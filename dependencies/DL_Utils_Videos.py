@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import random
 
 def load_video(path, max_frames=0, resize=(224, 224)):
     cap = cv2.VideoCapture(path)
@@ -33,3 +34,19 @@ def video_info(path):
     print(f"El número de frames por segundos es {seq.shape[0]/ttime}")
 
     return None
+
+def plot_frames(seq, m=3, n=3, figsize = (15,15)):
+    total = m*n  
+    frames_idx = list(np.arange(0,75,1))
+    sub_frames_idx = random.sample(frames_idx, total)
+    sub_frames_idx.sort()
+    fig, ax = plt.subplots(m, n, figsize = figsize)
+    
+    for i, ax in enumerate(ax.flat):
+    if i <= len(sub_frames_idx):
+        ax.imshow(seq[sub_frames_idx[i]])
+        ax.set_title(f"Frame Number {sub_frames_idx[i]}")
+    else:
+        continue
+    
+    return None   
